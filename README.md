@@ -68,11 +68,6 @@ In order to provide internet access to the VMs, the module by default creates an
 
 To create a user ssh key, set ```create_user_ssh_key``` to ```true``` and provide the details in variable ```user_ssh_key_name``` and ```user_public_key```
 
-To display output details
-
-```bash
-terraform output metal-vmware-esxi
-```
 
 ## Contributing
 
