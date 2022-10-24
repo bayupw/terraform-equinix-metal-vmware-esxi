@@ -2,7 +2,7 @@
 
 Terraform module to deploy an ESXi host in Equinix Metal with option to create a Metal Gateway and User SSH key.
 > **_NOTE:_** 
-> Metal Gateway will be required if you need to assign a public IP to a VM running in the VMware ESXi host.
+> Metal Gateway is required if you need to assign a public IP to a VM running in the VMware ESXi host.
 
 ## Prerequisites
 
