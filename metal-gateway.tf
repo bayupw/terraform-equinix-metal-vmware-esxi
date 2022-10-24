@@ -26,7 +26,7 @@ resource "equinix_metal_port_vlan_attachment" "this" {
 
   device_id = equinix_metal_device_network_type.this[0].device_id
   port_name = "bond0"
-  vlan_vnid = equinix_metal_vlan.this[0].id
+  vlan_vnid = equinix_metal_vlan.this[0].vxlan
 }
 
 # Reserve a Public IP block
@@ -42,7 +42,7 @@ resource "equinix_metal_reserved_ip_block" "this" {
 }
 
 # Create a Metal Gateway
-resource "equinix_metal_gateway" "gateway" {
+resource "equinix_metal_gateway" "this" {
   count = var.create_metal_gateway ? 1 : 0
 
   project_id        = data.equinix_metal_project.this.id
